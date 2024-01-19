@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="appendImage()">click</button>
+  </body>
+  <script>
+    function appendImage() {
+      fetch("https://localhost:3000/1.jpg")
+        .then((res) => res.json())
+        .then((data) => {
+          const img = document.createElement("img");
+          img.src = data.url;
+          document.body.appendChild(img);
+        });
+    }
+    appendImage();
+    appendImage();
+    appendImage();
+    appendImage();
+    appendImage();
+    appendImage();
+    appendImage();
+    appendImage();
+    appendImage();
+  </script>
+</html>
